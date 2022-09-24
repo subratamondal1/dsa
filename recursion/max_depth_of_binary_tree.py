@@ -1,5 +1,5 @@
 # https://leetcode.com/problems/maximum-depth-of-binary-tree/
-#  Definition for a binary tree node.
+# Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
 #         self.val = val
@@ -20,8 +20,8 @@ class Solution:
             return 0
 
         # Hypothesis
-        left_subtree = self.maxDepth(root.left)
-        right_subtree = self.maxDepth(root.right)
+        left_subtree_height = self.maxDepth(root.left)
+        right_subtree_height = self.maxDepth(root.right)
 
         # Induction
-        return 1 + max(left_subtree, right_subtree)
+        return 1 + max(left_subtree_height, right_subtree_height)
